@@ -3,7 +3,7 @@
 **PhD in Neuroscience | Data Science Practitioner**
 
 ## 📄 My CV
-- **[Trilingual CV (English/German/Spanish)](https://gamindful.github.io/gamindful/gama_cv.html)** - Click the flags to switch languages!
+- **[CV (English/German/Spanish)](https://gamindful.github.io/gamindful/index.html)**
 
 ## 🔗 Links
 - [ORCID](https://orcid.org/0000-0003-4054-1373)
