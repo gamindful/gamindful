@@ -1,12 +1,7 @@
-# Hi there, I'm Gamaliel Mendoza-Cuevas 👋
+# Gamaliel Mendoza-Cuevas 
+[Multi CV](https://gamindful.github.io/gamindful/gama_cv.html)
+
 
 **PhD in Neuroscience | Data Science Practitioner**
-
-## 📄 My CV
-- **[CV (English/German/Spanish)](https://gamindful.github.io/gamindful/gama_cv.html)**
-
-## 🔗 Links
-- [ORCID](https://orcid.org/0000-0003-4054-1373)
-- [LinkedIn](https://www.linkedin.com/in/gamaliel-mendoza-cuevas/)
-
 ## Data Engineering, Analysis and Science.
+- In evolution
