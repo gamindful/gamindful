@@ -1,4 +1,4 @@
-# Hi there, I'm Gamaliel Mendoza-Cuevas 👋
+# Gamaliel Mendoza-Cuevas 
 
 **PhD in Neuroscience | Data Science Practitioner**
 
