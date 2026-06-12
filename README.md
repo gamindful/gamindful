@@ -1,7 +1,8 @@
 # Gamaliel Mendoza-Cuevas 
-[Multi CV](https://gamindful.github.io/gamindful/gama_cv.html)
-
 
 **PhD in Neuroscience | Data Science Practitioner**
 ## Data Engineering, Analysis and Science.
+
+[My experience, so far.](https://gamindful.github.io/gamindful/gama_cv.html)
+
 - In evolution
