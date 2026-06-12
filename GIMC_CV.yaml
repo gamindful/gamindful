@@ -1,0 +1,359 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json
+cv:
+  name: Gamaliel Mendoza-Cuevas
+  headline: PhD. in Neuroscience, Data Science enthusiast and quantitative researcher.
+  # location: Berlin, Germany. (Starting Q2 2026)
+  email: gimc@tutanota.de
+  #photo: "/Users/gamaliel/Documents/G/DS/Repos/gamindful/github_qr.jpg" 
+  photo: "/Users/gamaliel/Documents/G/cv/me.jpg"
+
+  phone:
+  website: https://orcid.org/0000-0003-4054-1373
+  social_networks:
+    - network: LinkedIn
+      username: gamaliel-mendoza-cuevas
+    - network: GitHub
+      username: gamindful
+  custom_connections:
+  sections:
+    Profile: 
+      - PhD in Neuroscience and Data Science implementer with experience in the development of machine learning models for healthcare applications, and basic research in animal models of neurological diseases. Background in signal processing, data analysis, and scientific research. Passionate about leveraging data-driven approaches to advance our understanding of neurological health and pathology. 
+      - (Engineering ↔ Analysis ↔ Science)
+    Expertise and certifications:
+      - label: Data Engineering (Databricks), Databases and SQL for Data Science (IBM)
+        details: Infrastructure (Hadoop, Databricks, Oracle, MySQL). #Databricks
+      - label: Deep Learning (NMA), Machine Learning Practitioner (Databricks), Machine Learning with Python (IBM)
+        details: ML Frameworks (PyTorch, TensorFlow, Sci-Kit, Transformers). #Databricks
+      - label: Data Analyst Associate (Databricks), Python for Data Science (IBM)
+        details: Programming languages (Python, Spark, SQL, R, MATLAB).
+      - label: Version control
+        details: Git, GitHub, Bitbucket.
+      - label: Research & development
+        details: Signal processing in Neuroscience, Data Science and Neuroscience, Machine Learning for healthcare.
+    Employment history:
+      - company: Cotiviti
+        position: Data & Insight Analyst.
+        date:
+        start_date: 2025-08
+        end_date: present
+        location: Remote, Mexico City, Mexico.
+        summary:
+        highlights:
+          - Deployment of model serving endpoints for Neural Network predictors for healthcare data.
+          - Development and monitoring of a recommendation system for healthcare.
+            - Development of recommendation systems for healthcare based on K-means clustering.
+            - Development of classifiers for healthcare data using convolutional neural networks.
+            - Development of Byte-Pair Encoding tokenizers for the analysis of healthcare data.
+            - Fine-tuning of Transformer-based language models for the analysis of healthcare data.
+          - Development of ETL pipelines for local and cloud deployment (Databricks).
+          - Implementation of data quality monitoring systems (mlflow).
+          - Generation of Bronze, Silver, and Gold datasets for data analysis.
+          - Development of Python-based applications using machine learning models for the analysis of healthcare data.
+      - company: BIOINVERT
+        position: Data Analyst.
+        date:
+        start_date: 2017-01
+        end_date: 2017-06
+        location: Mexico City, Mexico
+        summary: Standardization and publication of Neurophysiological measurements.
+        highlights:
+          - Analysis of CT scans for the quantification of bone density.
+          - Statistical analysis of Aging-related changes in bone density.
+          - Co-authored paper accepted at Veterinary radiology and ultrasound.
+      - company: APREXBIO
+        position: Research Intern.
+        date:
+        start_date: 2016-01
+        end_date: 2017-01
+        location: Mexico City, Mexico
+        summary: Standardization and publication of Neurophysiological measurements.
+        highlights:
+          - Analysis of visual evoked potentials in Rhesus monkeys.
+          - Certification on the use of MRI equipment for the acquisition of anatomical images.
+          - Book chapter of standardization of normal values for visual evoked potentials.
+          - Co-authored paper accepted at Experimental Gerontology.
+    education:
+      - institution: National Autonomous University of Mexico
+        area: Neuroscience.
+        degree: PhD
+        date:
+        start_date: 2020-08
+        end_date: 2026-04
+        location: Queretaro, Mexico
+        summary: PhD in Neuroscience under the Biomedical Sciences program. Basic research on Neuropathology, behavior and Neurophysiology in animal models. 
+        highlights:
+          - Published article accepted at Journal of Neurophysiology.
+          - "Thesis: Enhancement of visual discrimination deficits in a model of Parkinson's Disease by low dosages of L-DOPA."
+          - 'Advisor: PhD. Luis Alberto Carrillo Reid.'
+          - Scholarship for PhD studies, Mexican Secretariat of Science, Humanities, Technology, and Innovation.
+      - institution: National Autonomous University of Mexico
+        area: Neurobiology.
+        degree: MsC
+        date:
+        start_date: 2018-08
+        end_date: 2020-05
+        location: Queretaro, Mexico
+        summary: Behavioral assessment of visual discrimination in a mouse model of Parkinson's Disease.
+        highlights:
+          - 'GPA: 9.16/10.00, Honorific mention.'
+          - Scholarship for Master's studies, Mexican Secretariat of Science, Humanities, Technology, and Innovation.
+    languages:
+      - label: English
+        details: C1 (TOEFL iBT 110/120).
+      - label: German
+        details: A2 (Ongoing studies; A1, Goethe-Zertifikat).
+      - label: Spanish
+        details: Native.
+    Docs and repositories:
+      - label: Personal cloud 
+        details: https://c.mail.com/@1436672005888810536/5BhDibj6-RjvzxFlB2KcfQ
+    publications:
+      - title: "Impaired visually guided behavior in a mouse model of Parkinson's disease"
+        authors:
+          - '*Mendoza-Cuevas, G.*'
+          - Perez-Becerra, J.
+          - Velazquez-Contreras, R.
+          - Calderon, V
+          - Carrillo-Reid, L.
+        doi: https://doi.org/10.1152/jn.00307.2025
+        journal: Journal of Neurophysiology
+        date: 2025
+      - title: Visual evoked potentials in the Rhesus monkey
+        authors:
+          - '*Mendoza-Cuevas, G.*'
+          - Hernández-Godínez, B.
+          - Ibáñez-Contreras, A.
+          - '[ISBN: 9781536110753](https://novapublishers.com/shop/evoked-potentials-and-electrical-stimulation-clinical-roles-challenges-and-emerging-research/)'
+        date: 2017
+      - title: Computed tomography is a feasible method for quantifying bone density in Macaca mulatta
+        authors:
+          - Solís-Chávez, S.
+          - Castillo-Rivera, M.
+          - Arteaga-Silva, M.
+          - Ibáñez-Contreras, A.
+          - Hernández-Godínez, B. 
+          - Morón-Mendoza, A. 
+          - '*Mendoza-Cuevas, G.*'
+          - Morales-Guadarrama, A.
+          - Sacristan-Rock, E. 
+        doi: https://doi.org/10.1111/vru.12624
+        journal:  Veterinary Radiology and Ultrasound 
+        date: 2018
+      - title: Electrical activity of sensory pathways in female and male geriatric Rhesus monkeys (Macaca mulatta), and its relation to oxidative stress
+        authors:
+          - Ibáñez-Contreras, A.
+          - Hernández-Arciga, U.
+          - Poblano, A. 
+          - Arteaga-Silva, M.
+          - Hernández-Godínez, B.
+          - '*Mendoza-Cuevas, G.*'
+          - Toledo-Pérez, R.
+          - Alarcón-Aguilar, A.
+          - González-Puertos, V.
+          - Konigsberg, M. 
+        doi: https://doi.org/10.1016/j.exger.2017.11.003
+        journal: Experimental Gerontology  
+        date: 2018  
+      - title: The effect of oxidative stress on brain electrical activity and its repercussions on sensory organization in geriatric Rhesus monkeys in captivity
+        authors:
+          - Ibáñez-Contreras, A.
+          - Hernández-Godínez, B.
+          - '*Mendoza-Cuevas, G.*'
+          - Hernández-Arciga, U.
+          - Königsberg, M. 
+          - '[ISBN: 9781536110753](https://novapublishers.com/shop/evoked-potentials-and-electrical-stimulation-clinical-roles-challenges-and-emerging-research/)'
+        date: 2017
+    Other awards:
+      - title: Second place at the 9th state health research forum
+        authors: 
+          - Visual discrimination in a mouse model of Parkinson's Disease
+        journal: Queretaro, Mexico
+        date: 2024
+      - title: Third place at design contest for the Latin American Brain Initiative (LATBrain)
+        authors:
+        - ''
+        date: 2021
+
+
+
+design:
+  theme: engineeringclassic
+  page:
+    size: us-letter
+    top_margin: 0.7in
+    bottom_margin: 0.7in
+    left_margin: 0.7in
+    right_margin: 0.7in
+    show_footer: true
+    show_top_note: true
+  colors:
+    body: rgb(0, 0, 0)
+    name: rgb(0, 79, 144)
+    headline: rgb(0, 79, 144)
+    connections: rgb(0, 79, 144)
+    section_titles: rgb(0, 79, 144)
+    links: rgb(0, 79, 144)
+    footer: rgb(128, 128, 128)
+    top_note: rgb(128, 128, 128)
+  typography:
+    line_spacing: 0.6em
+    alignment: justified
+    date_and_location_column_alignment: right
+    font_family:
+      body: Source Sans 3
+      name: Source Sans 3
+      headline: Source Sans 3
+      connections: Source Sans 3
+      section_titles: Source Sans 3
+    font_size:
+      body: 10pt
+      name: 30pt
+      headline: 10pt
+      connections: 10pt
+      section_titles: 1.4em
+    small_caps:
+      name: false
+      headline: false
+      connections: false
+      section_titles: false
+    bold:
+      name: true
+      headline: false
+      connections: false
+      section_titles: true
+  links:
+    underline: false
+    show_external_link_icon: false
+  header:
+    alignment: center
+    photo_width: 3.5cm
+    photo_position: left
+    photo_space_left: 0.4cm
+    photo_space_right: 0.4cm
+    space_below_name: 0.7cm
+    space_below_headline: 0.7cm
+    space_below_connections: 0.7cm
+    connections:
+      phone_number_format: national
+      hyperlink: true
+      show_icons: true
+      display_urls_instead_of_usernames: false
+      separator: ''
+      space_between_connections: 0.5cm
+  section_titles:
+    type: with_partial_line
+    line_thickness: 0.5pt
+    space_above: 0.5cm
+    space_below: 0.3cm
+  sections:
+    allow_page_break: true
+    space_between_regular_entries: 1.2em
+    space_between_text_based_entries: 0.3em
+    show_time_spans_in:
+      - experience
+  entries:
+    date_and_location_width: 4.15cm
+    side_space: 0.2cm
+    space_between_columns: 0.1cm
+    allow_page_break: false
+    short_second_row: true
+    summary:
+      space_above: 0cm
+      space_left: 0cm
+    highlights:
+      bullet: •
+      nested_bullet: •
+      space_left: 0.15cm
+      space_above: 0cm
+      space_between_items: 0cm
+      space_between_bullet_and_text: 0.5em
+  templates:
+    footer: '*NAME -- PAGE_NUMBER/TOTAL_PAGES*'
+    top_note: '*LAST_UPDATED CURRENT_DATE*'
+    single_date: MONTH_ABBREVIATION YEAR
+    date_range: START_DATE – END_DATE
+    time_span: HOW_MANY_YEARS YEARS HOW_MANY_MONTHS MONTHS
+    one_line_entry:
+      main_column: '**LABEL:** DETAILS'
+    education_entry:
+      main_column: |-
+        **INSTITUTION**, AREA
+        SUMMARY
+        HIGHLIGHTS
+      degree_column: '**DEGREE**'
+      date_and_location_column: |-
+        LOCATION
+        DATE
+    normal_entry:
+      main_column: |-
+        **NAME**
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: |-
+        LOCATION
+        DATE
+    experience_entry:
+      main_column: |-
+        **COMPANY**, POSITION
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: |-
+        LOCATION
+        DATE
+    publication_entry:
+      main_column: |-
+        **TITLE**
+        SUMMARY
+        AUTHORS
+        URL (JOURNAL)
+      date_and_location_column: DATE
+locale:
+  language: english
+  # last_updated: Last updated in
+  # month: month
+  # months: months
+  # year: year
+  # years: years
+  # present: present
+  # month_abbreviations:
+  #   - Jan
+  #   - Feb
+  #   - Mar
+  #   - Apr
+  #   - May
+  #   - June
+  #   - July
+  #   - Aug
+  #   - Sept
+  #   - Oct
+  #   - Nov
+  #   - Dec
+  # month_names:
+  #   - January
+  #   - February
+  #   - March
+  #   - April
+  #   - May
+  #   - June
+  #   - July
+  #   - August
+  #   - September
+  #   - October
+  #   - November
+  #   - December
+settings:
+  #current_date: '2026-03-15'
+  render_command:
+    design:
+    locale:
+    typst_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.typ
+    pdf_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.pdf
+    markdown_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.md
+    html_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.html
+    png_path: rendercv_output/NAME_IN_SNAKE_CASE_CV.png
+    dont_generate_markdown: false
+    dont_generate_html: false
+    dont_generate_typst: false
+    dont_generate_pdf: false
+    dont_generate_png: false
+  bold_keywords: []
