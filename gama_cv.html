@@ -749,20 +749,20 @@ function downloadCVasPDF() {
   // Snapshot the body background and set white for PDF
   const originalBodyBg = document.body.style.background;
   const originalContainerBg = document.querySelector('.container').style.background;
-  document.body.style.background = '#ffffff';
-  document.querySelector('.container').style.background = '#ffffff';
+  document.body.style.background = 'white';
+  document.querySelector('.container').style.background = 'white';
 
   const element = document.querySelector('.container');
 
   const opt = {
     margin:      [0, 0, 0, 0], // 1 inch = 25.4 mm on all sides
     filename:    filename,
-    image:       { type: 'jpeg', quality: 0.98 },
+    image:       { type: 'jpeg', quality: 1 },
     html2canvas: {
       scale: 1,
       useCORS: true,
       logging: false,
-      backgroundColor: '#ffffff'
+      backgroundColor: 'white'
     },
     jsPDF: {
       unit: 'mm',
