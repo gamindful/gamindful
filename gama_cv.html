@@ -7,6 +7,7 @@
 <!-- <link rel="icon" href="https://github.githubassets.com/favicons/favicon-dark.svg" type="image/svg+xml"> -->
 <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <style>
 * {
 margin: 0;
@@ -18,7 +19,7 @@ body {
 font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 color: #000;
 line-height: 1.6;
-background: linear-gradient(180deg, #2f2f2f 25%,#949494 75%);
+background: linear-gradient(180deg, #4b4b4b 20%,#ffffff 100%);
 padding: 20px;
 }
 
@@ -56,7 +57,7 @@ opacity: 0.8;
 .container {
 max-width: 8.5in;
 margin: 40px auto;
-background:linear-gradient(180deg, #cecece 5%,#878787 100%); /* rgba(255, 255, 255, 0.778); */
+background:linear-gradient(180deg, #ffffff 5%,#b9b9b9 100%); /* rgba(255, 255, 255, 0.778); */
 padding: 40px;
 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 border-radius: 8px;
@@ -303,23 +304,86 @@ justify-content: center;
 }
 }
 
-@print {
+@media print {
 body {
-background: white;
-padding: 0;
+background: white !important;
+padding: 0 !important;
 }
 
 .container {
-max-width: 100%;
-margin: 0;
-padding: 0;
-box-shadow: none;
-border-radius: 0;
+max-width: 100% !important;
+margin: 0 !important;
+padding: 40px !important;
+box-shadow: none !important;
+border-radius: 0 !important;
+background: white !important;
 }
 
 .language-toggle {
-display: none;
+display: none !important;
 }
+
+.pdf-download-btn {
+display: none !important;
+}
+}
+
+/* Adobe Acrobat-style PDF download button */
+.pdf-download-btn {
+position: fixed;
+bottom: 28px;
+right: 28px;
+z-index: 9999;
+width: 56px;
+height: 56px;
+background: #ffffff;
+border: none;
+border-radius: 10px;
+box-shadow: 0 4px 16px rgba(0,0,0,0.22), 0 1px 4px rgba(0,0,0,0.12);
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0;
+transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.pdf-download-btn:hover {
+box-shadow: 0 8px 28px rgba(0,0,0,0.28), 0 2px 8px rgba(0,0,0,0.16);
+transform: translateY(-2px);
+}
+
+.pdf-download-btn:active {
+transform: translateY(0);
+box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.pdf-download-btn svg {
+width: 32px;
+height: 36px;
+}
+
+/* Tooltip */
+.pdf-download-btn::after {
+content: attr(data-tooltip);
+position: absolute;
+right: 64px;
+top: 50%;
+transform: translateY(-50%);
+background: rgba(30,30,30,0.88);
+color: #fff;
+font-size: 12px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+white-space: nowrap;
+padding: 5px 10px;
+border-radius: 5px;
+pointer-events: none;
+opacity: 0;
+transition: opacity 0.2s;
+}
+
+.pdf-download-btn:hover::after {
+opacity: 1;
 }
 </style>
 </head>
@@ -329,6 +393,25 @@ display: none;
 <button class="lang-btn" data-lang="de" title="Deutsch">🇩🇪</button>
 <button class="lang-btn" data-lang="es" title="Español">🇲🇽</button>
 </div>
+
+<!-- PDF Download Button: clean white page sheet -->
+<button class="pdf-download-btn" id="pdfDownloadBtn" data-tooltip="Download CV as PDF" title="Download CV as PDF" onclick="downloadCVasPDF()">
+  <svg viewBox="0 0 38 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Page body -->
+    <path d="M6 2 H26 L36 12 V42 Q36 43 35 43 H6 Q5 43 5 42 V3 Q5 2 6 2 Z"
+          fill="#ffffff" stroke="#b0b8c1" stroke-width="1.5"/>
+    <!-- Folded corner triangle -->
+    <path d="M26 2 L36 12 H27 Q26 12 26 11 Z"
+          fill="#dce3ea" stroke="#b0b8c1" stroke-width="1"/>
+    <!-- Lines suggesting text -->
+    <line x1="11" y1="20" x2="30" y2="20" stroke="#ccd0d6" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="11" y1="25" x2="30" y2="25" stroke="#ccd0d6" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="11" y1="30" x2="24" y2="30" stroke="#ccd0d6" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Down arrow -->
+    <line x1="20" y1="34" x2="20" y2="41" stroke="#6b7a8d" stroke-width="2" stroke-linecap="round"/>
+    <polyline points="16,38 20,42 24,38" fill="none" stroke="#6b7a8d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
 
 <div class="container">
 <!-- Header -->
@@ -595,38 +678,122 @@ Languages 👉🔗🖱️
 </div>
 
 <script>
+// ─── Language switching ───────────────────────────────────────────────────────
+
+// Track the currently active language globally
+let currentLang = 'en';
+
 function switchLanguage(lang) {
-// Update active button
-document.querySelectorAll('.lang-btn').forEach(btn => {
-btn.classList.remove('active');
-});
-document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+  // Update active button
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
 
-// Update page content
-document.querySelectorAll('[data-en]').forEach(element => {
-const attr = `data-${lang}`;
-if (element.hasAttribute(attr)) {
-element.textContent = element.getAttribute(attr);
+  // Update page content (mirrors extract_cv_to_pdf.py logic)
+  document.querySelectorAll('[data-en]').forEach(element => {
+    const attr = `data-${lang}`;
+    if (element.hasAttribute(attr)) {
+      element.textContent = element.getAttribute(attr);
+    }
+  });
+
+  // Update document language
+  document.documentElement.lang = lang;
+
+  // Store preference & track current lang
+  currentLang = lang;
+  try { localStorage.setItem('preferredLanguage', lang); } catch(e) {}
+
+  // Update PDF button tooltip to reflect current language
+  const langNames = { en: 'English', de: 'Deutsch', es: 'Español' };
+  const btn = document.getElementById('pdfDownloadBtn');
+  if (btn) btn.setAttribute('data-tooltip', `Download CV (${langNames[lang]}) as PDF`);
 }
-});
 
-// Update document language
-document.documentElement.lang = lang;
-
-// Store preference
-localStorage.setItem('preferredLanguage', lang);
-}
-
-// Event listeners
+// Event listeners for language buttons
 document.querySelectorAll('.lang-btn').forEach(btn => {
-btn.addEventListener('click', function() {
-switchLanguage(this.getAttribute('data-lang'));
-});
+  btn.addEventListener('click', function() {
+    switchLanguage(this.getAttribute('data-lang'));
+  });
 });
 
 // Load saved preference
-const saved = localStorage.getItem('preferredLanguage') || 'en';
+const saved = (function() {
+  try { return localStorage.getItem('preferredLanguage'); } catch(e) { return null; }
+})() || 'en';
 switchLanguage(saved);
+
+
+// ─── PDF Download — automatic, no dialog, no browser headers/footers ─────────
+
+function downloadCVasPDF() {
+  const btn = document.getElementById('pdfDownloadBtn');
+  const lang = currentLang;
+  const filename = `gama_cv_${lang}.pdf`;
+
+  // Visual feedback while generating
+  btn.disabled = true;
+  btn.style.opacity = '0.5';
+  btn.style.cursor = 'wait';
+  btn.setAttribute('data-tooltip', 'Generating PDF…');
+
+  // Elements to hide in the PDF output
+  const hideSelectors = ['.language-toggle', '.pdf-download-btn'];
+  const hidden = hideSelectors.map(sel => {
+    const el = document.querySelector(sel);
+    if (el) { const prev = el.style.display; el.style.display = 'none'; return { el, prev }; }
+    return null;
+  }).filter(Boolean);
+
+  // Snapshot the body background and set white for PDF
+  const originalBodyBg = document.body.style.background;
+  const originalContainerBg = document.querySelector('.container').style.background;
+  document.body.style.background = '#ffffff';
+  document.querySelector('.container').style.background = '#ffffff';
+
+  const element = document.querySelector('.container');
+
+  const opt = {
+    margin:      [25.4, 25.4, 25.4, 25.4], // 1 inch = 25.4 mm on all sides
+    filename:    filename,
+    image:       { type: 'jpeg', quality: 0.98 },
+    html2canvas: {
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      backgroundColor: '#ffffff'
+    },
+    jsPDF: {
+      unit: 'mm',
+      format: 'a4',
+      orientation: 'portrait'
+    },
+    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+  };
+
+  html2pdf().set(opt).from(element).save().then(() => {
+    // Restore hidden elements
+    hidden.forEach(({ el, prev }) => { el.style.display = prev; });
+    // Restore backgrounds
+    document.body.style.background = originalBodyBg;
+    document.querySelector('.container').style.background = originalContainerBg;
+    // Restore button
+    btn.disabled = false;
+    btn.style.opacity = '';
+    btn.style.cursor = '';
+    const langNames = { en: 'English', de: 'Deutsch', es: 'Español' };
+    btn.setAttribute('data-tooltip', `Download CV (${langNames[lang]}) as PDF`);
+  }).catch(err => {
+    console.error('PDF generation failed:', err);
+    hidden.forEach(({ el, prev }) => { el.style.display = prev; });
+    document.body.style.background = originalBodyBg;
+    document.querySelector('.container').style.background = originalContainerBg;
+    btn.disabled = false;
+    btn.style.opacity = '';
+    btn.style.cursor = '';
+  });
+}
 </script>
 </body>
 </html>

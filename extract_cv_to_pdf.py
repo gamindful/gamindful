@@ -94,10 +94,11 @@ def extract_cv_to_pdf(language: str, output_path: str = None) -> str:
     return output_path
 
 
-if __name__ == "__main__":
-    for lang in ["en", "de", "es"]:
-        try:
-            pdf_path = extract_cv_to_pdf(lang)
-            print(f"✓ Generated {pdf_path}")
-        except Exception as e:
-            print(f"✗ Error generating {lang} PDF: {e}")
+# if __name__ == "__main__":
+#     for lang in ["en", "de", "es"]:
+def main(lang: str):
+    try:
+        pdf_path = extract_cv_to_pdf(lang)
+        print(f"✓ Generated {pdf_path}")
+    except Exception as e:
+        print(f"✗ Error generating {lang} PDF: {e}")
