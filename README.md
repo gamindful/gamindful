@@ -6,5 +6,7 @@
 - In evolution
 
 <p align="center">
-  <img src="github_qr.jpg" alt="QR Code">
+  <a href="https://gamindful.github.io/gamindful/gama_cv.html">
+    <img src="github_qr.png" alt="QR Code">
+  </a>
 </p>
