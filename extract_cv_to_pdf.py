@@ -54,20 +54,23 @@ def extract_cv_to_pdf(language: str, output_path: str = None) -> str:
             if not src.startswith("http") and not src.startswith("file://"):
                 img["src"] = f"file://{os.path.join(base_dir, src)}"
     
-    # Add CSS for 1-inch margins (96px per inch at 96dpi, or 2.54cm)
+    # Use the container's 40px padding as the page margin so every PDF page
+    # gets the same whitespace as the container in the HTML version
     style_tag = soup.find("style")
     if style_tag:
         margin_css = """
         @page {
-            margin: 1in;
+            margin: 40px;
         }
         body {
             margin: 0 !important;
             padding: 0 !important;
         }
         .container {
+            width: 100% !important;
+            max-width: 100% !important;
             margin: 0 !important;
-            padding: 40px !important;
+            padding: 0 !important;
         }
         """
         style_tag.append(margin_css)
@@ -85,8 +88,11 @@ def extract_cv_to_pdf(language: str, output_path: str = None) -> str:
         with sync_playwright() as p:
             browser = p.chromium.launch()
             page = browser.new_page()
-            page.goto(f"file://{os.path.abspath(tmp_path)}")
-            page.pdf(path=output_path, format="A4", margin={"top": "1in", "bottom": "1in", "left": "1in", "right": "1in"})
+            page.goto(f"file://{os.path.abspath(tmp_path)}", wait_until="networkidle")
+            # Wait for web fonts (Font Awesome icons) so the mail/ORCID/
+            # LinkedIn/GitHub logos render in the PDF instead of blank boxes
+            page.evaluate("document.fonts.ready")
+            page.pdf(path=output_path, format="Letter", margin={"top": "40px", "bottom": "40px", "left": "40px", "right": "40px"})
             browser.close()
     finally:
         os.unlink(tmp_path)
@@ -94,11 +100,11 @@ def extract_cv_to_pdf(language: str, output_path: str = None) -> str:
     return output_path
 
 
-# if __name__ == "__main__":
-#     for lang in ["en", "de", "es"]:
-def main(lang: str):
-    try:
-        pdf_path = extract_cv_to_pdf(lang)
-        print(f"✓ Generated {pdf_path}")
-    except Exception as e:
-        print(f"✗ Error generating {lang} PDF: {e}")
+if __name__ == "__main__":
+    for lang in ["en", "de", "es"]:
+#def main(lang: str):
+        try:
+            pdf_path = extract_cv_to_pdf(lang)
+            print(f"✓ Generated {pdf_path}")
+        except Exception as e:
+            print(f"✗ Error generating {lang} PDF: {e}")
