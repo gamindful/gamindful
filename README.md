@@ -5,4 +5,6 @@
 
 - In evolution
 
-![QR Code](github_qr.jpg)
+<p align="center">
+  <img src="github_qr.jpg" alt="QR Code">
+</p>
