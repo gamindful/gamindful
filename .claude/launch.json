@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mexico-economy-map",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/Users/gamaliel/Documents/G/DS/Repos/Mex_finance/server.py", "8940", "/Users/gamaliel/Documents/G/DS/Repos/Mex_finance"],
+      "port": 8940
+    }
+  ]
+}
