@@ -36,8 +36,7 @@ Analysis and Science roles per the cited sources.
 
 > Sources: local projects (Mex_finance, fmri-analysis-course, fx-flights-tracker, gamindful),
 > Claude projects (MusiKloud, TherapIA, de_pipeline), GitHub repos, and certifications
-> (Databricks, IBM, Neuromatch, plus PhD/MSc Neuroscience). An interactive radar version
-> lives in `Data_Science_Update/skills_gap_analysis.html`.
+> (Databricks, IBM, Neuromatch, plus PhD/MSc Neuroscience).
 
 <details>
 <summary><b>Referenced skills required by the field</b> (click to expand)</summary>
