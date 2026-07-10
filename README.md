@@ -101,6 +101,9 @@ Each axis lists the concrete skills the sources name as required, with citations
 4. Coursera — [In-Demand Data Analyst Skills](https://www.coursera.org/articles/in-demand-data-analyst-skills-to-get-hired)
 5. Dataquest — [Data Analyst Skills That Get You Hired](https://www.dataquest.io/blog/data-analyst-skills/)
 
+
+### CV
+
 <p align="center">
   <a href="https://gamindful.github.io/gamindful/gama_cv.html">
     <img src="github_qr.png" alt="QR Code">
