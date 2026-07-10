@@ -11,6 +11,16 @@ Analysis and Science roles per the cited sources.
 
 ### Abilities vs. field benchmark
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="skills_radar_dark.svg">
+    <img src="skills_radar_light.svg" alt="Radar chart comparing my demonstrated abilities (solid blue) to the field-required benchmark (dashed aqua) across eight ability axes" width="640">
+  </picture>
+</p>
+
+<details>
+<summary><b>Scores &amp; gaps</b> (table view)</summary>
+
 | Ability axis | Mine | Field | Δ | Read |
 |---|:--:|:--:|:--:|---|
 | Data Analysis & Statistics | 85 | 95 | −10 | Development area |
@@ -21,6 +31,8 @@ Analysis and Science roles per the cited sources.
 | NLP & LLMs | 68 | 60 | +8 | Strength |
 | Machine Learning & Deep Learning | 95 | 85 | +10 | Strength |
 | Signal & Biomedical Data | 88 | 25 | +63 | Domain specialty |
+
+</details>
 
 > Sources: local projects (Mex_finance, fmri-analysis-course, fx-flights-tracker, gamindful),
 > Claude projects (MusiKloud, TherapIA, de_pipeline), GitHub repos, and certifications
