@@ -112,14 +112,132 @@ Each axis lists the concrete skills the sources name as required, with citations
 ### Skills Inventory
 
 - Data Engineering
+  - ETL Pipelines
+  - ELT Pipelines
+  - Data Warehousing
+  - PySpark
+  - Spark SQL
+  - Databricks
+  - Delta Lake
+  - Delta Tables
+  - Unity Catalog
+  - Hadoop
+  - Oracle
+  - MySQL
+  - Schema Design
+  - Window Functions
+  - Data Ingestion
+  - Data Validation
+  - Crosswalk Mapping
+  - Data Architecture
+  - Docker
 - Data Analysis & Statistics
+  - Statistical Modeling
+  - Exploratory Analysis
+  - Hypothesis Testing
+  - Regression Analysis
+  - Time Series
+  - Forecasting
+  - SQL
+  - Drift Detection
+  - KS Test
+  - Pearson Correlation
+  - Feature Engineering
+  - Data Preprocessing
 - Machine Learning & Deep Learning
+  - Deep Learning
+  - Neural Networks
+  - CNNs
+  - Graph Neural Networks
+  - K-Means Clustering
+  - PCA
+  - Distributed Training
+  - GPU Training
+  - TPU Training
+  - Explainable AI
+  - Predictive Modeling
 - NLP & LLMs
+  - Transformers
+  - LLM Fine-Tuning
+  - BPE Tokenization
+  - Text Classification
+  - Sentence Embeddings
+  - TF-IDF
+  - Cosine Similarity
+  - Embeddings
+  - One-Hot Encoding
 - Audio & Computer Vision
+  - Audio ML
+  - CLAP Embeddings
+  - Spectrogram Analysis
+  - Computer Vision
+  - Facial Recognition
+  - Emotion Recognition
+  - Speaker Diarization
+  - UMAP
 - Data Visualization
+  - Matplotlib
+  - Plotly
+  - Dashboards
+  - KPI Dashboards
+  - HTML Reporting
+  - Choropleth Mapping
+  - Geospatial Analysis
+  - Data Storytelling
+  - Executive Reporting
 - MLOps & ML Lifecycle
+  - MLflow
+  - Model Registry
+  - Experiment Tracking
+  - Model Serving
+  - Model Signatures
+  - REST APIs
+  - DataRobot
+  - Cloudpickle
+  - Safetensors
 - Recommendation Systems
+  - Similarity Scoring
+  - Recommendation Ranking
+  - Coverage Evaluation
+  - Rule-Based Filtering
+  - Adoption Tracking
 - Data Governance
+  - Data Lineage
+  - Source Hashing
+  - Drift Monitoring
 - Neuroscience & Biomedical
+  - EEG Analysis
+  - fMRI Analysis
+  - Functional Connectivity
+  - GLM
+  - Neuroimaging
+  - Signal Processing
+  - Behavioral Analytics
+  - Neurophysiology
+  - Animal Models
+  - Translational Research
 - Programming & Tools
+  - Python
+  - R
+  - MATLAB
+  - JavaScript
+  - FastAPI
+  - Web Scraping
+  - Git
+  - GitHub
+  - Bitbucket
+  - PyTorch
+  - TensorFlow
+  - Keras
+  - Scikit-learn
+  - SciPy
+  - NumPy
+  - Pandas
+  - Browser Automation
 - Research & Communication
+  - Scientific Writing
+  - Peer Review
+  - Technical Writing
+  - R&D Leadership
+  - Stakeholder Communication
+  - Bilingual (EN/ES)
