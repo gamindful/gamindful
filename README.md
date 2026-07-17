@@ -109,7 +109,7 @@ Each axis lists the concrete skills the sources name as required, with citations
   </a>
 </p>
 
-### Skills Inventory
+### Skills Inventory (drop-down list)
 
 <details>
 <summary><b>Data Engineering</b></summary>
