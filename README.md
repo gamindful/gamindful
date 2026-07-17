@@ -108,3 +108,18 @@ Each axis lists the concrete skills the sources name as required, with citations
     <img src="github_qr.png" alt="QR Code">
   </a>
 </p>
+
+### Skills Inventory
+
+- Data Engineering
+- Data Analysis & Statistics
+- Machine Learning & Deep Learning
+- NLP & LLMs
+- Audio & Computer Vision
+- Data Visualization
+- MLOps & ML Lifecycle
+- Recommendation Systems
+- Data Governance
+- Neuroscience & Biomedical
+- Programming & Tools
+- Research & Communication
