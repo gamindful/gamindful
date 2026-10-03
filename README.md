@@ -1,7 +1,6 @@
 # Gamaliel Mendoza-Cuevas 
 
 **PhD in Neuroscience | Analytics Engineer**
-## Data Engineering, Analysis and Science.
 
 A skills-gap analysis of my demonstrated abilities versus a benchmark of what the field
 requires, synthesized from published industry sources. Scores are on a 0–100 scale:
